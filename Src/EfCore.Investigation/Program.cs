@@ -14,12 +14,12 @@ var dbContext = new BudgetSharingDbContext(optionsBuilder.Options);
 dbContext.Database.Migrate();
 
 // CASE 1: Query with SingleOrDefault - Throws InvalidOperationException with message: Sequence contains more than one element
-//var permission = await dbContext.BudgetPermissions.SingleOrDefaultAsync();
+// var permission = await dbContext.BudgetPermissions.SingleOrDefaultAsync();
 
 // CASE 2: Query with FirstOrDefault - Throws InvalidOperationException with message: Sequence contains no elements
-//var permission = await dbContext.BudgetPermissions.FirstOrDefaultAsync();
+// var permission = await dbContext.BudgetPermissions.FirstOrDefaultAsync();
 
 // CASE 3: Query with ToListAsync - Query has been frozen and looping on BudgetPermission constructor
-//var permissions = await dbContext.BudgetPermissions.ToListAsync();
+// var permissions = await dbContext.BudgetPermissions.ToListAsync();
 
 Console.WriteLine("Hello, World!");
